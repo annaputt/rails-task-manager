@@ -1,0 +1,21 @@
+
+<div>
+  <h1>Edit task</h1>
+  <%= form_with model: @task do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :details %>
+  <%= f.text_area :details %>
+
+  <%= f.label :completed %>
+  <%= f.check_box :completed %>
+
+  <%= f.submit %>
+  <% end %>
+
+  <hr>
+  <%= link_to tasks_path do %>
+    <i class="fa-solid fa-arrow-rotate-left"></i> Back to list
+  <% end %>
+</div>
